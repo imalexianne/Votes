@@ -8,9 +8,9 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes=[
-    new Quote(1, 'Water is life'),
-    new Quote(2, 'Sun is light'),
-    new Quote(3, 'God is all'),
+    new Quote(1, 'Water is life', 'Mammy','Alexianne'),
+    new Quote(2, 'Sun is light', 'Daddy', 'Alexianne'),
+    new Quote(3, 'God is all', 'Jesus', 'Alexianne'),
   ]
   constructor() { }
 
