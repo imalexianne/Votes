@@ -3,6 +3,7 @@
 </p> -->
 <ul>
     <div *ngFor='let quote of quotes, let i=index'>
+        <li  id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}}</li>
     <li>{{quote.name}}</li>
     
     <button  (click)='toogleDetals(i)'>Show Details</button>

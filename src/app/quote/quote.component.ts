@@ -8,9 +8,9 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes=[
-    new Quote(1, 'Water is life', 'Mammy','Alexianne', 0, 0),
-    new Quote(2, 'Sun is light', 'Daddy', 'Alexianne', 0, 0),
-    new Quote(3, 'God is all', 'Jesus', 'Alexianne', 0, 0),
+    new Quote(1, 'Water is life', 'Mammy','Alexianne', 0, 0, new Date(2019,0,28)),
+    new Quote(2, 'Sun is light', 'Daddy', 'Alexianne', 0, 0, new Date(2019,0,28)),
+    new Quote(3, 'God is all', 'Jesus', 'Alexianne', 0, 0,new Date(2019,0,28)),
   ]
 
   completeQuote(isComplete,index){
