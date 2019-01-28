@@ -7,7 +7,7 @@
     
     <button  (click)='toogleDetals(i)'>Show Details</button>
     
-    <app-quote-detals *ngIf="quote.showDescription" [quote]='quote'></app-quote-detals>
+    <app-quote-detals *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-detals>
     
    
   </div>

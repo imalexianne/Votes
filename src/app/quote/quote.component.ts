@@ -13,6 +13,11 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'God is all', 'Jesus', 'Alexianne', 0, 0),
   ]
 
+  completeQuote(isComplete,index){
+    if (isComplete){
+        this.quotes.splice(index,1);
+        }
+        }
   toogleDetals(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
    
