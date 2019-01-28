@@ -8,10 +8,16 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes=[
-    new Quote(1, 'Water is life', 'Mammy','Alexianne'),
-    new Quote(2, 'Sun is light', 'Daddy', 'Alexianne'),
-    new Quote(3, 'God is all', 'Jesus', 'Alexianne'),
+    new Quote(1, 'Water is life', 'Mammy','Alexianne', 0, 0),
+    new Quote(2, 'Sun is light', 'Daddy', 'Alexianne', 0, 0),
+    new Quote(3, 'God is all', 'Jesus', 'Alexianne', 0, 0),
   ]
+
+  toogleDetals(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+   
+   
+}
   constructor() { }
 
   ngOnInit() {

@@ -8,9 +8,5 @@ import{Quote}from'./quote'
 export class AppComponent {
   title = 'Votes';
 
-  quotes=[
-    new Quote(1, 'Water is life'),
-    new Quote(2, 'Sun is light'),
-    new Quote(3, 'God is all'),
-  ]
+
 }

@@ -2,8 +2,13 @@
   quote works!
 </p> -->
 <ul>
-  <div *ngFor='let quote of quotes'>
+    <div *ngFor='let quote of quotes, let i=index'>
     <li>{{quote.name}}</li>
-    <app-quote-details [quote]='quote'></app-quote-details>
+    
+    <button  (click)='toogleDetals(i)'>Show Details</button>
+    
+    <app-quote-detals *ngIf="quote.showDescription" [quote]='quote'></app-quote-detals>
+    
+   
   </div>
   </ul>
