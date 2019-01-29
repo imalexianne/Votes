@@ -4,9 +4,9 @@
 <p>Created in {{quote.completeDate|dateCount}} days</p>
 
 {{quote.upvote}}
-<button (click)="quote.upvote = quote.upvote + 1">Upvote</button>
+<button (click)="upvote()">Upvote</button>
 
-<button  (click)="quote.downvote = quote.downvote + 1">Downvote</button>
+<button  (click)="downvote()">Downvote</button>
 {{quote.downvote}} <br><br>
 
 <button class="btn btn-danger" (click) = 'quoteComplete(true)'> Delete  </button> <br><br>

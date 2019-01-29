@@ -9,23 +9,19 @@ export class QuoteDetalsComponent implements OnInit {
 @Input() quote:Quote;
 
 @Output() isComplete= new EventEmitter<boolean>();
-@Output() isViewed= new EventEmitter<boolean>();
-@Output() isUpvoted= new EventEmitter<boolean>();
-@Output() isDownvoted= new EventEmitter<boolean>();
+
 
   quoteComplete(complete:boolean){
     this.isComplete.emit(complete);
   }
 
-  quoteViewed(viewed:boolean){
-    this.isViewed.emit(viewed);
-  }
  
-  downVote(complete:boolean){
-    this.isDownvoted.emit(complete);
+ 
+  downvote(){
+    this.quote.downvote++
   }
-  upVote(complete:boolean){
-    this.isUpvoted.emit(complete);
+  upvote(){
+    this.quote.upvote++
   }
   ngOnInit() {
   }
