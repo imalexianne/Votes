@@ -1,21 +1,21 @@
 <!-- <p>
   quote works!
 </p> -->
-
+<div clss="mm">
 <div class="container">
     <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
 </div>
-<div class="container">
+<div class="container" text-align:center>
 <ul>
     <div class="row" *ngFor='let quote of quotes, let i=index'>
       <div class="row">
-        <!-- <li  id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}}</li> -->
 
-    <li>{{quote.name}}</li>
+
+    <li>{{quote.name}}</li><br><br><br>
     
-    <button  class="btn btn-primary" (click)='toogleDetals(i)'>Show Details</button>
+    <button  class="btn btn-primary" (click)='toogleDetals(i)'>Show Details</button><br>
       </div>
 
       <div class="row" *ngIf="quote.showDescription">
@@ -24,4 +24,5 @@
    
   </div>
   </ul>
+  </div>
   </div>

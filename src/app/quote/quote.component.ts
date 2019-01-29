@@ -7,6 +7,7 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
+
   quotes=[
     new Quote(1, 'Water is life', 'Mammy','Alexianne', 0, 0, new Date(2019,0,28)),
     new Quote(2, 'Sun is light', 'Daddy', 'Alexianne', 0, 0, new Date(2019,0,28)),
@@ -29,6 +30,23 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
 
+}
+
+downVote(isDownvoted,index){
+  if (isDownvoted){
+    let downvote=this.quotes[index].downvote
+      downvote+= 1
+      this.quotes[index].downvote= downvote
+}
+
+}
+
+upVote(isUpvoted,index){
+if (isUpvoted){
+  let upvote=this.quotes[index].upvote
+    upvote+= 1
+    this.quotes[index].upvote=upvote
+}
 }
   constructor() { }
 
