@@ -21,7 +21,14 @@ export class QuoteComponent implements OnInit {
   toogleDetals(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
    
-   
+   }
+
+   addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+
 }
   constructor() { }
 

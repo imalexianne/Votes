@@ -1,15 +1,27 @@
 <!-- <p>
   quote works!
 </p> -->
+
+<div class="container">
+    <div class="row">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+</div>
+<div class="container">
 <ul>
-    <div *ngFor='let quote of quotes, let i=index'>
-        <li  id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}}</li>
+    <div class="row" *ngFor='let quote of quotes, let i=index'>
+      <div class="row">
+        <!-- <li  id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date}}</li> -->
+
     <li>{{quote.name}}</li>
     
-    <button  (click)='toogleDetals(i)'>Show Details</button>
-    
-    <app-quote-detals *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-detals>
-    
+    <button  class="btn btn-primary" (click)='toogleDetals(i)'>Show Details</button>
+      </div>
+
+      <div class="row" *ngIf="quote.showDescription">
+    <app-quote-detals  [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-detals>
+    </div>
    
   </div>
   </ul>
+  </div>
