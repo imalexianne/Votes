@@ -22,3 +22,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Link to live site on Github Pages
 https://github.com/imalexianne/Votes
 
+## copyright and license information
+This project is licensed under the MIT License
